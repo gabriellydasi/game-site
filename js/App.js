@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         direction: 'horizontal',
         // Define a direção de transição dos slides como horizontal.
         loop: true,
-        // Define que o carrossel não irá repetir os slides (não fará looping).
+        // Define que o carrossel irá repetir os slides (não fará looping).
 
         pagination: {
             el: '.swiper-pagination'
@@ -56,4 +56,28 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // Criação de um modal
+    const loginBtn = document.getElementById("loginBtn");
+    const modal = document.getElementById("loginModal");
+    const closeBtn = document.querySelector(".close");
+
+    // Abre o modal ao clicar no botão de login
+    loginBtn.addEventListener("click", () => {
+        modal.style.display = "block";
+    });
+
+    // Fecha o modal ao clicar no botão de fechar 
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none"
+    });
+
+    // Fecha o modal ao clicar fora dele
+    window.addEventListener("click", (e) => {
+        if(e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    
 });
