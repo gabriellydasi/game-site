@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 /* Remove a margem e o preenchimento padrão de todos os elementos e define o modelo de box-sizing como border-box. */
 
@@ -13,7 +14,6 @@
 body {
     position: relative;
     background-color: #000000;
-    font-family: "Roboto", sans-serif;
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
@@ -112,6 +112,21 @@ header {
 }
 /* O placeholder do campo de busca é branco, em maiúsculas, com espaçamento à esquerda e peso de fonte leve. */
 
+.login-button {
+    background-color: var(--primary);
+    color: #ffffff;
+    font-size: 14px;
+    border: 0;
+    border-radius: 4px;
+    padding: 10px 21px 10px 21px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.login-button:hover {
+    background-color: #b81411;
+}
+
 .swiper {
     width: 100%;
     height: 100vh;
@@ -167,32 +182,30 @@ header {
 
 .swiper .swiper-wrapper .swiper-slide .banner img {
     position: absolute;
-    max-width: 700px;
+    max-width: 800px;
     transform: translateX(-50%);
     z-index: 1;
     left: 50%;
 }
-/* As imagens dentro do banner são centralizadas horizontalmente e têm largura máxima de 700px. */
+/* As imagens dentro do banner são centralizadas horizontalmente e têm largura máxima de 800px. */
 
 .swiper .swiper-button-prev {
     position: absolute;
     width: 60px;
     height: 60px;
     top: 50%;
-    left: 60%;
+    left: 5%;
     z-index: 100;
-    background-color: red;
 }
 /* O botão anterior do swiper está posicionado com largura e altura de 60px, no centro vertical e com fundo vermelho. */
 
 .swiper .swiper-button-next {
     position: absolute;
-    right: 70%;
+    right: 5%;
     top: 50%;
     width: 60px;
     height: 60px;
     z-index: 100;
-    background-color: blue;
 }
 /* O botão próximo do swiper está posicionado com largura e altura de 60px, no centro vertical e com fundo azul. */
 
@@ -337,7 +350,7 @@ header {
 /* O título 'h4' da descrição à direita tem tamanho de fonte 1.3em, maiúsculas, peso 400, espaçamento entre letras de 1px, e é exibido como bloco inline. */
 
 .banner .right .description p {
-    margin: 5px 0 25px 30px;
+    margin: 5px 0 15px 30px;
     font-weight: 300;
 }
 /* Os parágrafos na descrição têm margem superior de 5px e margem inferior de 25px, com peso de fonte leve (300). */
