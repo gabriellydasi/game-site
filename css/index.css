@@ -139,32 +139,16 @@ header {
   background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
 }
 
-/* Conteúdo do modal */
-
-/* .modal-content {
-  background-color: white;
-  margin: 15% auto; 
- 
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 500px; 
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
- 
-
 .modal-content {
-    background-color: white;
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 400px;
-    position: relative;
-    text-align: center;
-  }
+  background-color: rgb(0, 0, 0);
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  text-align: center;
+}
 
 /* Botão de fechar */
 .close {
@@ -174,87 +158,107 @@ header {
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
+  color: #FFFFFF;
+  transition: all 0.5s;
 }
 
 .close:hover {
-  color: red; /* Efeito ao passar o mouse */
+  color: var(--primary); /* Efeito ao passar o mouse */
 }
 
 /* Estilo da logo */
-.logo {
-    width: 60px; /* Ajuste o tamanho da logo */
-    height: auto;
-    margin-bottom: 20px;
-  }
+.modal-content .logo   {
+  width: 60px; /* Ajuste o tamanho da logo */
+  height: auto;
+  margin-bottom: 20px;
+  filter: invert(1);
+}
 
-  /* Estilo do formulário */
+/* Estilo do formulário */
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Espaçamento entre os elementos */
-  }
-  
-  /* input {
-    width: calc(100% - 20px); /
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    margin: 0 10px; 
-    box-sizing: border-box; 
-  } */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaçamento entre os elementos */
+}
 
-  input {
-    width: calc(100% - 10px); /* Ocupa 100% do espaço, menos 10px */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    margin: 0 10px; /* 10px de margem nas laterais */
-    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
-  }
+input {
+  width: calc(100% - 20px); /* Ocupa 100% do espaço, menos 10px */
+  padding: 10px;
+  border: 0.1px solid #A3A3A3;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 0 10px; /* 10px de margem nas laterais */
+  box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+  background: transparent;
+  color: #FFFFFF;
+}
 
-  button {
-    width: calc(100% - 20px); /* Aplica a mesma lógica ao botão */
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 0 10px; /* 10px de margem nas laterais */
-  }
-  
-  /* button {
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  } */
-  
-  button:hover {
-    background-color: #0056b3;
-  }
+input::placeholder {
+  color: #A3A3A3;
+}
 
-  .forgot-password-container {
-    display: flex;
-    justify-content: flex-end; /* Alinha o conteúdo à direita */
-    margin: 10px; /* Adiciona margem para não colar nas bordas */
-  }
-  
-  /* Links de "Esqueci minha senha" e "Cadastre-se" */
-  .forgot-password, .register-link, .login-link {
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  .forgot-password:hover, .register-link a:hover, .login-link a:hover {
-    text-decoration: underline;
-  }
+button {
+  width: calc(100% - 20px); /* Aplica a mesma lógica ao botão */
+  padding: 10px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px; 
+}
+
+button:hover {
+  background-color: #C91815;
+}
+
+#loginForm p, #registerForm p {
+  color: #FFFFFF;
+  font-size: 13px;
+}
+
+#loginForm p > a, #registerForm p > a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.5s;
+  font-size: 13px;
+}
+
+#loginForm p > a:hover, #registerForm p > a:hover {
+  text-decoration: underline;
+}
+
+.forgot-password-container {
+  display: flex;
+  justify-content: flex-end; /* Alinha o conteúdo à direita */
+  margin: 10px; /* Adiciona margem para não colar nas bordas */
+}
+
+.forgot-password-container a {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.forgot-password-container a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* Links de "Esqueci minha senha" e "Cadastre-se" */
+.forgot-password,
+.register-link,
+.login-link {
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.5s;
+}
+
+.register-link a:hover,
+.login-link a:hover {
+  text-decoration: underline;
+  color: var(--primary);
+}
 
 .swiper {
   width: 100%;
