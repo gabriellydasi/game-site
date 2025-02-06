@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Cria uma nova instância do Swiper (carrossel), associada ao contêiner com a classe 'swiper'.
         direction: 'horizontal',
         // Define a direção de transição dos slides como horizontal.
-        loop: false,
+        loop: true,
         // Define que o carrossel não irá repetir os slides (não fará looping).
 
         pagination: {
